@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.3.3/video-js.css" rel="stylesheet">
+  <title>Document</title>
+
+  <script src="https://cdn.bootcss.com/video.js/6.6.2/ie8/videojs-ie8.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.3.3/video.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-flash@2/dist/videojs-flash.min.js"></script>  
+</head>
+<body>
+    <video id="video-js" class="video-js" controls preload="auto" width="640" height="264" poster='/static/images/del.png' data-setup="{autoplay': true,techOrder: ['html5', 'flash']}">
+      <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+    </video>
+
+    <script>
+      window.onload=function(){
+        //   var myplay = videojs('video-js',{
+        //   techOrder: ['html5', 'flash'],
+        //   flash: {
+        //     swf: ''
+        //   }
+        // })
+        videojs.options.flash.swf='/video-js.swf';
+      }
+    </script>
+</body>
+</html>
